@@ -7,6 +7,7 @@ import App from "./App.vue";
 import HomePage from "./pages/HomePage.vue";
 import JSPage from "./pages/JSPage.vue";
 import GOPage from "./pages/GOPage.vue";
+import TestPage from "./pages/TestPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,6 +15,7 @@ const router = createRouter({
     { path: "/", component: HomePage },
     { path: "/why-javascript-is-used", component: JSPage },
     { path: "/why-go-is-used", component: GOPage },
+    { path: "/test-your-knowledge", component: TestPage },
   ],
 });
 

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 interface LanguageInfo {
   title: string;
   intro: string;
@@ -21,7 +19,7 @@ const props = defineProps<{
   <div class="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl">
       <h1
-        class="from-primary to-secondary mb-8 bg-gradient-to-r bg-clip-text text-center text-4xl font-bold text-transparent"
+        class="mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-center text-4xl font-bold text-transparent"
       >
         {{ languageInfo.title }}
       </h1>
@@ -35,15 +33,15 @@ const props = defineProps<{
             :key="index"
             class="flex items-start"
           >
-            <span class="text-secondary mr-2">•</span>
+            <span class="mr-2 text-secondary">•</span>
             <span class="text-lg">{{ point }}</span>
           </li>
         </ul>
         <div
           v-if="languageInfo.comparison"
-          class="bg-primary/10 border-primary/20 space-y-4 rounded-lg border p-6"
+          class="space-y-4 rounded-lg border border-primary/20 bg-primary/10 p-6"
         >
-          <h2 class="text-secondary mb-4 text-2xl font-semibold">
+          <h2 class="mb-4 text-2xl font-semibold text-secondary">
             {{ languageInfo.comparison.title }}
           </h2>
           <div
@@ -51,11 +49,11 @@ const props = defineProps<{
             :key="index"
             class="flex items-start"
           >
-            <span class="text-secondary mr-2">•</span>
+            <span class="mr-2 text-secondary">•</span>
             <span class="text-lg" v-html="point"></span>
           </div>
         </div>
-        <p class="text-secondary mt-4 text-center text-xl font-semibold">
+        <p class="mt-4 text-center text-xl font-semibold text-secondary">
           {{ languageInfo.conclusion }}
         </p>
       </div>

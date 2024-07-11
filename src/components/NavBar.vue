@@ -9,21 +9,27 @@
         <div class="flex items-center space-x-6">
           <RouterLink
             to="/"
-            class="hover:text-secondary text-lg font-semibold text-white transition-all duration-300"
+            class="text-lg font-semibold text-white transition-all duration-300 hover:text-secondary"
           >
             Home
           </RouterLink>
           <RouterLink
             to="/why-javascript-is-used"
-            class="hover:text-secondary text-white transition-all duration-300"
+            class="text-white transition-all duration-300 hover:text-secondary"
           >
             JavaScript
           </RouterLink>
           <RouterLink
             to="/why-go-is-used"
-            class="hover:text-secondary text-white transition-all duration-300"
+            class="text-white transition-all duration-300 hover:text-secondary"
           >
             GO
+          </RouterLink>
+          <RouterLink
+            to="/test-your-knowledge"
+            class="text-white transition-all duration-300 hover:text-secondary"
+          >
+            Test Your Knowledge
           </RouterLink>
         </div>
       </div>
