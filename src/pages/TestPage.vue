@@ -13,14 +13,16 @@ const currentQuestion = computed(() => {
 });
 
 const handleAnswer = (answer: string) => {
-  if (answer === currentQuestion.value.correctAnswer) {
-    userAnswers.value++;
-  }
+  if (currentQuestion.value) {
+    if (answer === currentQuestion.value.correctAnswer) {
+      userAnswers.value++;
+    }
 
-  if (currentQuestionIndex.value < Object.keys(questions.value).length - 1) {
-    currentQuestionIndex.value++;
-  } else {
-    showResult.value = true;
+    if (currentQuestionIndex.value < Object.keys(questions.value).length - 1) {
+      currentQuestionIndex.value++;
+    } else {
+      showResult.value = true;
+    }
   }
 };
 
